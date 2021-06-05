@@ -122,6 +122,7 @@ test('객체 테스트', () => {
     // 객체의 모든 값이 일치하는지를 확인하는게 아니라 일부만 확인 할때는 toMatchObject를 사용하라
     // 모든 값 일치 여부는 toEqual 이다.
     expect(data).toMatchObject({ a: 1 });
+    expect(data).toMatchObject({ a: expect.any(Number) });
 
     // toEqual(expect.objectContaining(객체))을 사용 하면 toMatchObject와 유사하게 만들 수 있다.
     expect(data).toEqual(expect.objectContaining({ a: 1 }));
@@ -152,6 +153,24 @@ test('객체 테스트', () => {
             x: 0
         }
     })) */
+
+    const houseForSale = {
+        bath: true,
+        bedrooms: 4,
+        kitchen: {
+          amenities: ['oven', 'stove'],
+          area: 20
+        }
+    };
+    const desiredHouse = {
+        bath: true,
+        kitchen: {
+            amenities: expect.arrayContaining(['oven']),
+            area: expect.any(Number),
+        },
+    }
+    
+    expect(houseForSale).toMatchObject(desiredHouse);
 });
 
 test('값이 아닌 타입 일치여부 확인하기', () => {
