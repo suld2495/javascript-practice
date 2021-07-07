@@ -1,0 +1,32 @@
+{
+  "name": "javascript-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suld2495/javascript-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suld2495/javascript-practice/issues"
+  },
+  "homepage": "https://github.com/suld2495/javascript-practice#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "babel-jest": "^27.0.1",
+    "jest": "^27.0.1",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0"
+  },
+  "dependencies": {
+    "@babel/node": "^7.14.2",
+    "@types/jest": "^26.0.23"
+  }
+}
